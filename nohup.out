@@ -1,0 +1,891 @@
+Pushing from manifest to org scale-org-1 / space scale-space-1 as admin...
+Using manifest file /tmp/sample_app/manifest.yml
+Getting app info...
+Updating app with these attributes...
+  name:                scale-app-1-1
+  path:                /tmp/sample_app
+  buildpack:           go_buildpack
+  disk quota:          32M
+  health check type:   port
+  instances:           10
+  memory:              32M
+  stack:               cflinuxfs2
+  env:
+    CATS_PORTS
+    GOPACKAGENAME
+    UDP_PORTS
+  routes:
+    scale-app-1-1.apps.pcf.local
+
+Updating app scale-app-1-1...
+Mapping routes...
+Comparing local files to remote cache...
+Packaging files to upload...
+Uploading files...
+ 0 B / 2.51 KiB [-------------------------------------------------------------------------------------------------------------]   0.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [=====================================================================================================] 100.00% 1s
+
+Waiting for API to complete processing files...
+
+Staging app and tracing logs...
+   Downloading go_buildpack...
+   Downloaded go_buildpack
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 creating container for instance 6aff4877-ef17-4c05-98d5-3ff762fad947
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 successfully created container for instance 6aff4877-ef17-4c05-98d5-3ff762fad947
+   Downloading app package...
+   Downloaded app package (2.5K)
+   -----> Go Buildpack version 1.8.23
+   -----> Installing godep v80
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/bbf47e67b04afb122c89b341b3cb2de0/godep-v80-linux-x64-3b019ddc.tgz]
+   -----> Installing glide v0.13.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/fb75f0abef446fbff5234aefa2a63c3c/glide-v0.13.1-linux-x64-4959fbf0.tgz]
+   -----> Installing dep v0.4.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/4287a35506199471d814bd6d8127e38e/dep-v0.4.1-linux-x64-c678d9fc.tgz]
+   -----> Installing go 1.8.7
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/2d78093980ccee4a4ac3c2ea22025813/go1.8.7.linux-amd64-9bdda6e7.tar.gz]
+          [31;1m**WARNING**[0m Installing package '.' (default)
+   -----> Running: go install -tags cloudfoundry -buildmode pie .
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading build artifacts cache...
+   Uploading droplet...
+   Uploaded build artifacts cache (213B)
+   Uploaded droplet (2.8M)
+   Uploading complete
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 stopping instance 6aff4877-ef17-4c05-98d5-3ff762fad947
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 destroying container for instance 6aff4877-ef17-4c05-98d5-3ff762fad947
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 successfully destroyed container for instance 6aff4877-ef17-4c05-98d5-3ff762fad947
+
+Waiting for app to start...
+
+name:              scale-app-1-1
+requested state:   started
+instances:         10/10
+usage:             32M x 10 instances
+routes:            scale-app-1-1.apps.pcf.local
+last uploaded:     Thu 02 Aug 09:37:26 UTC 2018
+stack:             cflinuxfs2
+buildpack:         go_buildpack
+start command:     backend
+
+     state      since                  cpu    memory     disk       details
+#0   starting   2018-08-02T09:38:28Z   0.0%   0 of 32M   0 of 32M   
+#1   running    2018-08-02T09:38:32Z   0.0%   0 of 32M   0 of 32M   
+#2   starting   2018-08-02T09:38:28Z   0.0%   0 of 32M   0 of 32M   
+#3   running    2018-08-02T09:38:32Z   0.0%   0 of 32M   0 of 32M   
+#4   running    2018-08-02T09:38:32Z   0.0%   0 of 32M   0 of 32M   
+#5   starting   2018-08-02T09:38:28Z   0.0%   0 of 32M   0 of 32M   
+#6   starting   2018-08-02T09:38:28Z   0.0%   0 of 32M   0 of 32M   
+#7   starting   2018-08-02T09:38:28Z   0.0%   0 of 32M   0 of 32M   
+#8   starting   2018-08-02T09:38:28Z   0.0%   0 of 32M   0 of 32M   
+#9   starting   2018-08-02T09:38:28Z   0.0%   0 of 32M   0 of 32M   
+
+Pushing from manifest to org scale-org-1 / space scale-space-1 as admin...
+Using manifest file /tmp/sample_app/manifest.yml
+Getting app info...
+Updating app with these attributes...
+  name:                scale-app-1-2
+  path:                /tmp/sample_app
+  buildpack:           go_buildpack
+  disk quota:          32M
+  health check type:   port
+  instances:           5
+  memory:              32M
+  stack:               cflinuxfs2
+  env:
+    CATS_PORTS
+    GOPACKAGENAME
+    UDP_PORTS
+  routes:
+    scale-app-1-2.apps.pcf.local
+
+Updating app scale-app-1-2...
+Mapping routes...
+Comparing local files to remote cache...
+Packaging files to upload...
+Uploading files...
+ 0 B / 2.51 KiB [-------------------------------------------------------------------------------------------------------------]   0.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [=====================================================================================================] 100.00% 1s
+
+Waiting for API to complete processing files...
+
+Staging app and tracing logs...
+   Downloading go_buildpack...
+   Downloaded go_buildpack
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 creating container for instance de9d4f8f-e2ad-4a18-b8b3-0cb3efa30ba2
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 successfully created container for instance de9d4f8f-e2ad-4a18-b8b3-0cb3efa30ba2
+   Downloading app package...
+   Downloaded app package (2.5K)
+   -----> Go Buildpack version 1.8.23
+   -----> Installing godep v80
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/bbf47e67b04afb122c89b341b3cb2de0/godep-v80-linux-x64-3b019ddc.tgz]
+   -----> Installing glide v0.13.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/fb75f0abef446fbff5234aefa2a63c3c/glide-v0.13.1-linux-x64-4959fbf0.tgz]
+   -----> Installing dep v0.4.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/4287a35506199471d814bd6d8127e38e/dep-v0.4.1-linux-x64-c678d9fc.tgz]
+   -----> Installing go 1.8.7
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/2d78093980ccee4a4ac3c2ea22025813/go1.8.7.linux-amd64-9bdda6e7.tar.gz]
+          [31;1m**WARNING**[0m Installing package '.' (default)
+   -----> Running: go install -tags cloudfoundry -buildmode pie .
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading droplet...
+   Uploading build artifacts cache...
+   Uploaded build artifacts cache (214B)
+   Uploaded droplet (2.8M)
+   Uploading complete
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 stopping instance de9d4f8f-e2ad-4a18-b8b3-0cb3efa30ba2
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 destroying container for instance de9d4f8f-e2ad-4a18-b8b3-0cb3efa30ba2
+
+Waiting for app to start...
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 successfully destroyed container for instance de9d4f8f-e2ad-4a18-b8b3-0cb3efa30ba2
+
+name:              scale-app-1-2
+requested state:   started
+instances:         5/5
+usage:             32M x 5 instances
+routes:            scale-app-1-2.apps.pcf.local
+last uploaded:     Thu 02 Aug 09:38:07 UTC 2018
+stack:             cflinuxfs2
+buildpack:         go_buildpack
+start command:     backend
+
+     state      since                  cpu    memory     disk       details
+#0   running    2018-08-02T09:39:17Z   0.0%   0 of 32M   0 of 32M   
+#1   starting   2018-08-02T09:39:14Z   0.0%   0 of 32M   0 of 32M   
+#2   starting   2018-08-02T09:39:14Z   0.0%   0 of 32M   0 of 32M   
+#3   running    2018-08-02T09:39:16Z   0.0%   0 of 32M   0 of 32M   
+#4   starting   2018-08-02T09:39:14Z   0.0%   0 of 32M   0 of 32M   
+
+Pushing from manifest to org scale-org-1 / space scale-space-1 as admin...
+Using manifest file /tmp/sample_app/manifest.yml
+Getting app info...
+Updating app with these attributes...
+  name:                scale-app-1-3
+  path:                /tmp/sample_app
+  buildpack:           go_buildpack
+  disk quota:          32M
+  health check type:   port
+  instances:           100
+  memory:              32M
+  stack:               cflinuxfs2
+  env:
+    CATS_PORTS
+    GOPACKAGENAME
+    UDP_PORTS
+  routes:
+    scale-app-1-3.apps.pcf.local
+
+Updating app scale-app-1-3...
+Mapping routes...
+Comparing local files to remote cache...
+Packaging files to upload...
+Uploading files...
+ 0 B / 2.51 KiB [-------------------------------------------------------------------------------------------------------------]   0.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [=====================================================================================================] 100.00% 1s
+
+Waiting for API to complete processing files...
+
+Staging app and tracing logs...
+   Downloading go_buildpack...
+   Downloaded go_buildpack
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 creating container for instance e46fc85a-6318-476e-89f3-4118fa40e60b
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 successfully created container for instance e46fc85a-6318-476e-89f3-4118fa40e60b
+   Downloading app package...
+   Downloaded app package (2.5K)
+   -----> Go Buildpack version 1.8.23
+   -----> Installing godep v80
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/bbf47e67b04afb122c89b341b3cb2de0/godep-v80-linux-x64-3b019ddc.tgz]
+   -----> Installing glide v0.13.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/fb75f0abef446fbff5234aefa2a63c3c/glide-v0.13.1-linux-x64-4959fbf0.tgz]
+   -----> Installing dep v0.4.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/4287a35506199471d814bd6d8127e38e/dep-v0.4.1-linux-x64-c678d9fc.tgz]
+   -----> Installing go 1.8.7
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/2d78093980ccee4a4ac3c2ea22025813/go1.8.7.linux-amd64-9bdda6e7.tar.gz]
+          [31;1m**WARNING**[0m Installing package '.' (default)
+   -----> Running: go install -tags cloudfoundry -buildmode pie .
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading build artifacts cache...
+   Uploading droplet...
+   Uploaded build artifacts cache (213B)
+   Uploaded droplet (2.8M)
+   Uploading complete
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 stopping instance e46fc85a-6318-476e-89f3-4118fa40e60b
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 destroying container for instance e46fc85a-6318-476e-89f3-4118fa40e60b
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 successfully destroyed container for instance e46fc85a-6318-476e-89f3-4118fa40e60b
+
+Waiting for app to start...
+
+name:              scale-app-1-3
+requested state:   started
+instances:         100/100
+usage:             32M x 100 instances
+routes:            scale-app-1-3.apps.pcf.local
+last uploaded:     Thu 02 Aug 09:38:51 UTC 2018
+stack:             cflinuxfs2
+buildpack:         go_buildpack
+start command:     backend
+
+      state      since                  cpu    memory     disk       details
+#0    running    2018-08-02T09:40:04Z   0.0%   0 of 32M   0 of 32M   
+#1    running    2018-08-02T09:40:03Z   0.0%   0 of 32M   0 of 32M   
+#2    starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#3    starting   2018-08-02T09:40:04Z   0.0%   0 of 32M   0 of 32M   
+#4    starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#5    starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#6    running    2018-08-02T09:40:04Z   0.0%   0 of 32M   0 of 32M   
+#7    starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#8    starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#9    starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#10   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#11   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#12   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#13   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#14   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#15   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#16   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#17   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#18   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#19   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#20   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#21   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#22   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#23   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#24   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#25   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#26   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#27   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#28   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#29   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#30   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#31   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#32   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#33   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#34   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#35   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#36   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#37   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#38   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#39   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#40   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#41   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#42   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#43   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#44   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#45   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#46   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#47   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#48   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#49   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#50   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#51   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#52   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#53   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#54   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#55   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#56   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#57   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#58   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#59   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#60   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#61   running    2018-08-02T09:40:01Z   0.0%   0 of 32M   0 of 32M   
+#62   running    2018-08-02T09:40:03Z   0.0%   0 of 32M   0 of 32M   
+#63   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#64   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#65   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#66   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#67   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#68   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#69   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#70   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#71   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#72   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#73   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#74   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#75   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#76   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#77   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#78   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#79   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#80   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#81   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#82   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#83   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#84   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#85   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#86   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#87   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#88   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#89   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#90   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#91   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#92   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#93   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#94   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#95   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#96   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#97   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#98   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+#99   starting   2018-08-02T09:39:59Z   0.0%   0 of 32M   0 of 32M   
+
+Scaling app scale-app-1-1 in org scale-org-1 / space scale-space-1 as admin...
+OK
+Scaling app scale-app-1-2 in org scale-org-1 / space scale-space-1 as admin...
+OK
+Scaling app scale-app-1-3 in org scale-org-1 / space scale-space-1 as admin...
+OK
+Scaling app scale-app-1-1 in org scale-org-1 / space scale-space-1 as admin...
+OK
+Scaling app scale-app-1-2 in org scale-org-1 / space scale-space-1 as admin...
+OK
+Scaling app scale-app-1-3 in org scale-org-1 / space scale-space-1 as admin...
+OK
+Scaling app scale-app-1-1 in org scale-org-1 / space scale-space-1 as admin...
+OK
+Scaling app scale-app-1-2 in org scale-org-1 / space scale-space-1 as admin...
+OK
+Scaling app scale-app-1-3 in org scale-org-1 / space scale-space-1 as admin...
+OK
+Pushing from manifest to org scale-org-2 / space scale-space-2 as admin...
+Using manifest file /tmp/sample_app/manifest.yml
+Getting app info...
+Updating app with these attributes...
+  name:                scale-app-2-1
+  path:                /tmp/sample_app
+  buildpack:           go_buildpack
+  disk quota:          32M
+  health check type:   port
+  instances:           10
+  memory:              32M
+  stack:               cflinuxfs2
+  env:
+    CATS_PORTS
+    GOPACKAGENAME
+    UDP_PORTS
+  routes:
+    scale-app-2-1.apps.pcf.local
+
+Updating app scale-app-2-1...
+Mapping routes...
+Comparing local files to remote cache...
+Packaging files to upload...
+Uploading files...
+ 0 B / 2.51 KiB [-------------------------------------------------------------------------------------------------------------]   0.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [=====================================================================================================] 100.00% 1s
+
+Waiting for API to complete processing files...
+
+Staging app and tracing logs...
+   Downloading go_buildpack...
+   Downloaded go_buildpack
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 creating container for instance 581c72da-cf94-4b6c-83a9-cc92ff5e5e94
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 failed to create container for instance 581c72da-cf94-4b6c-83a9-cc92ff5e5e94: external networker up: exit status 1
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 destroying container for instance 581c72da-cf94-4b6c-83a9-cc92ff5e5e94
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 successfully destroyed container for instance 581c72da-cf94-4b6c-83a9-cc92ff5e5e94
+Error staging application: Staging error: staging failed
+FAILED
+Pushing from manifest to org scale-org-2 / space scale-space-2 as admin...
+Using manifest file /tmp/sample_app/manifest.yml
+Getting app info...
+Updating app with these attributes...
+  name:                scale-app-2-2
+  path:                /tmp/sample_app
+  buildpack:           go_buildpack
+  disk quota:          32M
+  health check type:   port
+  instances:           5
+  memory:              32M
+  stack:               cflinuxfs2
+  env:
+    CATS_PORTS
+    GOPACKAGENAME
+    UDP_PORTS
+  routes:
+    scale-app-2-2.apps.pcf.local
+
+Updating app scale-app-2-2...
+Mapping routes...
+Comparing local files to remote cache...
+Packaging files to upload...
+Uploading files...
+ 0 B / 2.51 KiB [-------------------------------------------------------------------------------------------------------------]   0.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [=====================================================================================================] 100.00% 1s
+
+Waiting for API to complete processing files...
+
+Staging app and tracing logs...
+   Downloading go_buildpack...
+   Downloaded go_buildpack
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 creating container for instance 4037a48d-42b5-4990-801d-4140c92de559
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 successfully created container for instance 4037a48d-42b5-4990-801d-4140c92de559
+   Downloading app package...
+   Downloaded app package (2.5K)
+   -----> Go Buildpack version 1.8.23
+   -----> Installing godep v80
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/bbf47e67b04afb122c89b341b3cb2de0/godep-v80-linux-x64-3b019ddc.tgz]
+   -----> Installing glide v0.13.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/fb75f0abef446fbff5234aefa2a63c3c/glide-v0.13.1-linux-x64-4959fbf0.tgz]
+   -----> Installing dep v0.4.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/4287a35506199471d814bd6d8127e38e/dep-v0.4.1-linux-x64-c678d9fc.tgz]
+   -----> Installing go 1.8.7
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/2d78093980ccee4a4ac3c2ea22025813/go1.8.7.linux-amd64-9bdda6e7.tar.gz]
+          [31;1m**WARNING**[0m Installing package '.' (default)
+   -----> Running: go install -tags cloudfoundry -buildmode pie .
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading build artifacts cache...
+   Uploading droplet...
+   Uploaded build artifacts cache (213B)
+   Uploaded droplet (2.8M)
+   Uploading complete
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 stopping instance 4037a48d-42b5-4990-801d-4140c92de559
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 destroying container for instance 4037a48d-42b5-4990-801d-4140c92de559
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 successfully destroyed container for instance 4037a48d-42b5-4990-801d-4140c92de559
+
+Waiting for app to start...
+
+name:              scale-app-2-2
+requested state:   started
+instances:         5/5
+usage:             32M x 5 instances
+routes:            scale-app-2-2.apps.pcf.local
+last uploaded:     Thu 02 Aug 09:51:21 UTC 2018
+stack:             cflinuxfs2
+buildpack:         go_buildpack
+start command:     backend
+
+     state     since                  cpu    memory     disk       details
+#0   running   2018-08-02T09:52:21Z   0.0%   0 of 32M   0 of 32M   
+#1   running   2018-08-02T09:52:21Z   0.0%   0 of 32M   0 of 32M   
+#2   running   2018-08-02T09:52:21Z   0.0%   0 of 32M   0 of 32M   
+#3   running   2018-08-02T09:52:20Z   0.0%   0 of 32M   0 of 32M   
+#4   running   2018-08-02T09:52:20Z   0.0%   0 of 32M   0 of 32M   
+
+Pushing from manifest to org scale-org-2 / space scale-space-2 as admin...
+Using manifest file /tmp/sample_app/manifest.yml
+Getting app info...
+Creating app with these attributes...
++ name:         scale-app-2-3
+  path:         /tmp/sample_app
++ buildpack:    go_buildpack
++ disk quota:   32M
++ memory:       32M
+  env:
++   CATS_PORTS
++   GOPACKAGENAME
++   UDP_PORTS
+  routes:
++   scale-app-2-3.apps.pcf.local
+
+Creating app scale-app-2-3...
+Mapping routes...
+Comparing local files to remote cache...
+Packaging files to upload...
+Uploading files...
+ 0 B / 2.51 KiB [-------------------------------------------------------------------------------------------------------------]   0.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [=====================================================================================================] 100.00% 1s
+
+Waiting for API to complete processing files...
+
+Staging app and tracing logs...
+   Downloading go_buildpack...
+   Downloaded go_buildpack
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 creating container for instance 68b76392-4041-4618-a716-76bb56f6dd0f
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 successfully created container for instance 68b76392-4041-4618-a716-76bb56f6dd0f
+   Downloading app package...
+   Downloaded app package (2.5K)
+   -----> Go Buildpack version 1.8.23
+   -----> Installing godep v80
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/bbf47e67b04afb122c89b341b3cb2de0/godep-v80-linux-x64-3b019ddc.tgz]
+   -----> Installing glide v0.13.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/fb75f0abef446fbff5234aefa2a63c3c/glide-v0.13.1-linux-x64-4959fbf0.tgz]
+   -----> Installing dep v0.4.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/4287a35506199471d814bd6d8127e38e/dep-v0.4.1-linux-x64-c678d9fc.tgz]
+   -----> Installing go 1.8.7
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/2d78093980ccee4a4ac3c2ea22025813/go1.8.7.linux-amd64-9bdda6e7.tar.gz]
+          [31;1m**WARNING**[0m Installing package '.' (default)
+   -----> Running: go install -tags cloudfoundry -buildmode pie .
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading build artifacts cache...
+   Uploading droplet...
+   Uploaded build artifacts cache (214B)
+   Uploaded droplet (2.8M)
+   Uploading complete
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 stopping instance 68b76392-4041-4618-a716-76bb56f6dd0f
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 destroying container for instance 68b76392-4041-4618-a716-76bb56f6dd0f
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 successfully destroyed container for instance 68b76392-4041-4618-a716-76bb56f6dd0f
+
+Waiting for app to start...
+
+name:              scale-app-2-3
+requested state:   started
+instances:         1/1
+usage:             32M x 1 instances
+routes:            scale-app-2-3.apps.pcf.local
+last uploaded:     Thu 02 Aug 09:51:56 UTC 2018
+stack:             cflinuxfs2
+buildpack:         go_buildpack
+start command:     backend
+
+     state     since                  cpu    memory     disk       details
+#0   running   2018-08-02T09:53:00Z   0.0%   0 of 32M   0 of 32M   
+
+Scaling app scale-app-2-1 in org scale-org-2 / space scale-space-2 as admin...
+OK
+Scaling app scale-app-2-2 in org scale-org-2 / space scale-space-2 as admin...
+OK
+Scaling app scale-app-2-3 in org scale-org-2 / space scale-space-2 as admin...
+OK
+Scaling app scale-app-2-1 in org scale-org-2 / space scale-space-2 as admin...
+OK
+Scaling app scale-app-2-2 in org scale-org-2 / space scale-space-2 as admin...
+OK
+Scaling app scale-app-2-3 in org scale-org-2 / space scale-space-2 as admin...
+OK
+Scaling app scale-app-2-1 in org scale-org-2 / space scale-space-2 as admin...
+OK
+Scaling app scale-app-2-2 in org scale-org-2 / space scale-space-2 as admin...
+OK
+Scaling app scale-app-2-3 in org scale-org-2 / space scale-space-2 as admin...
+OK
+Pushing from manifest to org scale-org-3 / space scale-space-3 as admin...
+Using manifest file /tmp/sample_app/manifest.yml
+Getting app info...
+Updating app with these attributes...
+  name:                scale-app-3-1
+  path:                /tmp/sample_app
+  buildpack:           go_buildpack
+  disk quota:          32M
+  health check type:   port
+  instances:           10
+  memory:              32M
+  stack:               cflinuxfs2
+  env:
+    CATS_PORTS
+    GOPACKAGENAME
+    UDP_PORTS
+  routes:
+    scale-app-3-1.apps.pcf.local
+
+Updating app scale-app-3-1...
+Mapping routes...
+Comparing local files to remote cache...
+Packaging files to upload...
+Uploading files...
+ 0 B / 2.51 KiB [-------------------------------------------------------------------------------------------------------------]   0.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [=====================================================================================================] 100.00% 1s
+
+Waiting for API to complete processing files...
+
+Staging app and tracing logs...
+   Downloading go_buildpack...
+   Downloaded go_buildpack
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 creating container for instance f5582c71-6f1c-414a-bc01-270bbdea7eb3
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 successfully created container for instance f5582c71-6f1c-414a-bc01-270bbdea7eb3
+   Downloading app package...
+   Downloaded app package (2.5K)
+   -----> Go Buildpack version 1.8.23
+   -----> Installing godep v80
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/bbf47e67b04afb122c89b341b3cb2de0/godep-v80-linux-x64-3b019ddc.tgz]
+   -----> Installing glide v0.13.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/fb75f0abef446fbff5234aefa2a63c3c/glide-v0.13.1-linux-x64-4959fbf0.tgz]
+   -----> Installing dep v0.4.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/4287a35506199471d814bd6d8127e38e/dep-v0.4.1-linux-x64-c678d9fc.tgz]
+   -----> Installing go 1.8.7
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/2d78093980ccee4a4ac3c2ea22025813/go1.8.7.linux-amd64-9bdda6e7.tar.gz]
+          [31;1m**WARNING**[0m Installing package '.' (default)
+   -----> Running: go install -tags cloudfoundry -buildmode pie .
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading build artifacts cache...
+   Uploading droplet...
+   Uploaded build artifacts cache (213B)
+   Uploaded droplet (2.8M)
+   Uploading complete
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 stopping instance f5582c71-6f1c-414a-bc01-270bbdea7eb3
+   Cell 2b58922f-e8df-4746-8b15-12a102d77e25 destroying container for instance f5582c71-6f1c-414a-bc01-270bbdea7eb3
+
+Waiting for app to start...
+
+name:              scale-app-3-1
+requested state:   started
+instances:         10/10
+usage:             32M x 10 instances
+routes:            scale-app-3-1.apps.pcf.local
+last uploaded:     Thu 02 Aug 09:54:14 UTC 2018
+stack:             cflinuxfs2
+buildpack:         go_buildpack
+start command:     backend
+
+     state      since                  cpu    memory       disk        details
+#0   running    2018-08-02T09:55:11Z   0.0%   0 of 32M     0 of 32M    
+#1   starting   2018-08-02T09:55:09Z   0.0%   0 of 32M     0 of 32M    
+#2   running    2018-08-02T09:55:12Z   0.0%   0 of 32M     0 of 32M    
+#3   starting   2018-08-02T09:55:09Z   0.0%   0 of 32M     0 of 32M    
+#4   starting   2018-08-02T09:55:09Z   0.0%   0 of 32M     0 of 32M    
+#5   starting   2018-08-02T09:55:09Z   0.0%   0 of 32M     0 of 32M    
+#6   starting   2018-08-02T09:55:09Z   0.0%   44K of 32M   8K of 32M   
+#7   starting   2018-08-02T09:55:09Z   0.0%   0 of 32M     0 of 32M    
+#8   starting   2018-08-02T09:55:09Z   0.0%   0 of 32M     0 of 32M    
+#9   starting   2018-08-02T09:55:09Z   0.0%   0 of 32M     0 of 32M    
+
+Pushing from manifest to org scale-org-3 / space scale-space-3 as admin...
+Using manifest file /tmp/sample_app/manifest.yml
+Getting app info...
+Updating app with these attributes...
+  name:                scale-app-3-2
+  path:                /tmp/sample_app
+  buildpack:           go_buildpack
+  disk quota:          32M
+  health check type:   port
+  instances:           5
+  memory:              32M
+  stack:               cflinuxfs2
+  env:
+    CATS_PORTS
+    GOPACKAGENAME
+    UDP_PORTS
+  routes:
+    scale-app-3-2.apps.pcf.local
+
+Updating app scale-app-3-2...
+Mapping routes...
+Comparing local files to remote cache...
+Packaging files to upload...
+Uploading files...
+ 0 B / 2.51 KiB [-------------------------------------------------------------------------------------------------------------]   0.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [=====================================================================================================] 100.00% 1s
+
+Waiting for API to complete processing files...
+
+Staging app and tracing logs...
+   Downloading go_buildpack...
+   Downloaded go_buildpack
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 creating container for instance 6b8bd616-7f4c-4e03-afd1-77d259d34242
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 successfully created container for instance 6b8bd616-7f4c-4e03-afd1-77d259d34242
+   Downloading app package...
+   Downloaded app package (2.5K)
+   -----> Go Buildpack version 1.8.23
+   -----> Installing godep v80
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/bbf47e67b04afb122c89b341b3cb2de0/godep-v80-linux-x64-3b019ddc.tgz]
+   -----> Installing glide v0.13.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/fb75f0abef446fbff5234aefa2a63c3c/glide-v0.13.1-linux-x64-4959fbf0.tgz]
+   -----> Installing dep v0.4.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/4287a35506199471d814bd6d8127e38e/dep-v0.4.1-linux-x64-c678d9fc.tgz]
+   -----> Installing go 1.8.7
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/2d78093980ccee4a4ac3c2ea22025813/go1.8.7.linux-amd64-9bdda6e7.tar.gz]
+          [31;1m**WARNING**[0m Installing package '.' (default)
+   -----> Running: go install -tags cloudfoundry -buildmode pie .
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading build artifacts cache...
+   Uploading droplet...
+   Uploaded build artifacts cache (213B)
+   Uploaded droplet (2.8M)
+   Uploading complete
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 stopping instance 6b8bd616-7f4c-4e03-afd1-77d259d34242
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 destroying container for instance 6b8bd616-7f4c-4e03-afd1-77d259d34242
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 successfully destroyed container for instance 6b8bd616-7f4c-4e03-afd1-77d259d34242
+
+Waiting for app to start...
+
+name:              scale-app-3-2
+requested state:   started
+instances:         5/5
+usage:             32M x 5 instances
+routes:            scale-app-3-2.apps.pcf.local
+last uploaded:     Thu 02 Aug 09:54:46 UTC 2018
+stack:             cflinuxfs2
+buildpack:         go_buildpack
+start command:     backend
+
+     state      since                  cpu    memory     disk       details
+#0   starting   2018-08-02T09:55:47Z   0.0%   0 of 32M   0 of 32M   
+#1   running    2018-08-02T09:55:49Z   0.0%   0 of 32M   0 of 32M   
+#2   starting   2018-08-02T09:55:47Z   0.0%   0 of 32M   0 of 32M   
+#3   starting   2018-08-02T09:55:47Z   0.0%   0 of 32M   0 of 32M   
+#4   running    2018-08-02T09:55:50Z   0.0%   0 of 32M   0 of 32M   
+
+Pushing from manifest to org scale-org-3 / space scale-space-3 as admin...
+Using manifest file /tmp/sample_app/manifest.yml
+Getting app info...
+Updating app with these attributes...
+  name:                scale-app-3-3
+  path:                /tmp/sample_app
+  buildpack:           go_buildpack
+  disk quota:          32M
+  health check type:   port
+  instances:           100
+  memory:              32M
+  stack:               cflinuxfs2
+  env:
+    CATS_PORTS
+    GOPACKAGENAME
+    UDP_PORTS
+  routes:
+    scale-app-3-3.apps.pcf.local
+
+Updating app scale-app-3-3...
+Mapping routes...
+Comparing local files to remote cache...
+Packaging files to upload...
+Uploading files...
+ 0 B / 2.51 KiB [-------------------------------------------------------------------------------------------------------------]   0.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [========================================================================================================] 100.00% 2.51 KiB / 2.51 KiB [=====================================================================================================] 100.00% 1s
+
+Waiting for API to complete processing files...
+
+Staging app and tracing logs...
+   Downloading go_buildpack...
+   Downloaded go_buildpack
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 creating container for instance 30266eb2-7bd3-4dab-bbbf-1ca3cc5c1a06
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 successfully created container for instance 30266eb2-7bd3-4dab-bbbf-1ca3cc5c1a06
+   Downloading app package...
+   Downloaded app package (2.5K)
+   -----> Go Buildpack version 1.8.23
+   -----> Installing godep v80
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/bbf47e67b04afb122c89b341b3cb2de0/godep-v80-linux-x64-3b019ddc.tgz]
+   -----> Installing glide v0.13.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/fb75f0abef446fbff5234aefa2a63c3c/glide-v0.13.1-linux-x64-4959fbf0.tgz]
+   -----> Installing dep v0.4.1
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/4287a35506199471d814bd6d8127e38e/dep-v0.4.1-linux-x64-c678d9fc.tgz]
+   -----> Installing go 1.8.7
+          Copy [/tmp/buildpacks/53c120701488d47b3f0fa35ae9e52daa/dependencies/2d78093980ccee4a4ac3c2ea22025813/go1.8.7.linux-amd64-9bdda6e7.tar.gz]
+          [31;1m**WARNING**[0m Installing package '.' (default)
+   -----> Running: go install -tags cloudfoundry -buildmode pie .
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading build artifacts cache...
+   Uploading droplet...
+   Uploaded build artifacts cache (212B)
+   Uploaded droplet (2.8M)
+   Uploading complete
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 stopping instance 30266eb2-7bd3-4dab-bbbf-1ca3cc5c1a06
+
+Waiting for app to start...
+   Cell ca71573b-b165-4504-860c-7403d20ea3e3 destroying container for instance 30266eb2-7bd3-4dab-bbbf-1ca3cc5c1a06
+
+name:              scale-app-3-3
+requested state:   started
+instances:         100/100
+usage:             32M x 100 instances
+routes:            scale-app-3-3.apps.pcf.local
+last uploaded:     Thu 02 Aug 09:55:24 UTC 2018
+stack:             cflinuxfs2
+buildpack:         go_buildpack
+start command:     backend
+
+      state      since                  cpu    memory     disk       details
+#0    starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#1    starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#2    starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#3    starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#4    starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#5    starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#6    running    2018-08-02T09:56:28Z   0.0%   0 of 32M   0 of 32M   
+#7    starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#8    starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#9    starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#10   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#11   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#12   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#13   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#14   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#15   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#16   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#17   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#18   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#19   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#20   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#21   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#22   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#23   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#24   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#25   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#26   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#27   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#28   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#29   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#30   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#31   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#32   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#33   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#34   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#35   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#36   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#37   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#38   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#39   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#40   running    2018-08-02T09:56:27Z   0.0%   0 of 32M   0 of 32M   
+#41   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#42   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#43   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#44   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#45   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#46   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#47   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#48   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#49   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#50   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#51   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#52   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#53   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#54   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#55   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#56   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#57   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#58   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#59   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#60   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#61   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#62   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#63   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#64   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#65   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#66   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#67   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#68   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#69   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#70   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#71   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#72   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#73   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#74   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#75   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#76   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#77   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#78   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#79   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#80   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#81   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#82   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#83   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#84   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#85   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#86   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#87   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#88   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#89   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#90   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#91   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#92   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#93   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#94   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#95   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#96   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#97   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#98   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+#99   starting   2018-08-02T09:56:25Z   0.0%   0 of 32M   0 of 32M   
+
+Scaling app scale-app-3-1 in org scale-org-3 / space scale-space-3 as admin...
+OK
+Scaling app scale-app-3-2 in org scale-org-3 / space scale-space-3 as admin...
+FAILED
+Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit: app requested more memory than available
+Scaling app scale-app-3-3 in org scale-org-3 / space scale-space-3 as admin...
+OK
+Scaling app scale-app-3-1 in org scale-org-3 / space scale-space-3 as admin...
+OK
+Scaling app scale-app-3-2 in org scale-org-3 / space scale-space-3 as admin...
+OK
+Scaling app scale-app-3-3 in org scale-org-3 / space scale-space-3 as admin...
+OK
+Scaling app scale-app-3-1 in org scale-org-3 / space scale-space-3 as admin...
+OK
+Scaling app scale-app-3-2 in org scale-org-3 / space scale-space-3 as admin...
+OK
+Scaling app scale-app-3-3 in org scale-org-3 / space scale-space-3 as admin...
+OK

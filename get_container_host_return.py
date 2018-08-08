@@ -32,7 +32,7 @@ def get_container_host():
 	       			    result[b[q].get("stats").get("host")].append("{0}, {1}".format(q,b[q].get("stats").get("name")))
                                 else:
                                     result[b[q].get("stats").get("host")] = ["{0}, {1}".format(q,b[q].get("stats").get("name"))]
-	#import pdb;pdb.set_trace()
+	import pdb;pdb.set_trace()
 	return result
 
 def main():
